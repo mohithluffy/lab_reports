@@ -34,7 +34,7 @@ void file::insert(int Rsize,int n){
         return;
     }
  
-    for(int i=0;i<f.size();i++){
+    for(int i=0;i<=f.size();i++){
         int temp = psize-f[i]->fptr;
         if(Rsize+4<temp){
             f[i]->key.push_back(n);
@@ -75,11 +75,7 @@ void file::search(int key){
 
 
 int main(){
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
-    #endif
-
+   
     int size;
     cin>>size;
     file f(size);
