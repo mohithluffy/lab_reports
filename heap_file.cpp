@@ -34,9 +34,9 @@ void file::insert(int Rsize,int n){
         return;
     }
  
-    for(int i=0;i<=f.size();i++){
+    for(int i=0;i<f.size();i++){
         int temp = psize-f[i]->fptr;
-        if(Rsize+4<temp){
+        if(Rsize+4<=temp){
             f[i]->key.push_back(n);
             f[i]->ptrs.push_back(f[i]->fptr-16);
             f[i]->fptr = f[i]->fptr+Rsize+4;
